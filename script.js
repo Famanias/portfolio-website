@@ -1,3 +1,4 @@
+
 document.getElementById('downloadCV').addEventListener('click', function() {
     const link = document.createElement('a');
     link.href = 'CV-Isip, John Lynard.pdf';
@@ -5,42 +6,23 @@ document.getElementById('downloadCV').addEventListener('click', function() {
     link.click();
 });
 
-// function startLoader(){
-//     let counterElement = document.querySelector('.counter');
-//     let currentValue = ['Test','One','Two','Three'];
+gsap.registerPlugin(ScrollTrigger);
 
-//     function updateCounter(){
-//         for (let i = 0; i < currentValue.length; i++) {
-//             counterElement.textContent = currentValue[i];
-//         }
-//     }
-//     updateCounter();
-// }
-
-// startLoader();
-
-// gsap.to(".counter", 0.25,{
-//     delay: 0.5,
-//     opacity: 0, 
-// });
-
-// gsap.to(".bar", 0.25,{
-//     delay: 0.5,
-//     height: 0,
-//     stagger: {
-//         amount: 0.5,
-//     },
-//     ease: "power4.inOut",
-// });
-
-
-gsap.registerPlugin(ScrollTrigger)
 
 gsap.from('.logo div',{
     opacity:0,
     delay:1,
     x:20
 } )
+
+gsap.from('.h1', 1.5, {
+    delay: 0.5,
+    y: 700,
+    stagger:{
+        amount: 0.5,
+    },
+    easy: "power4.inOut",
+});
 
 const menu_items = document.querySelector('.menu-items')
 gsap.from(menu_items.children ,{
@@ -64,7 +46,6 @@ gsap.from(media_links.children ,{
     }
 })
 
-
 gsap.utils.toArray('.skill-img').forEach((skillImg, index) => {
     gsap.fromTo(skillImg, {
         opacity: 0,
@@ -81,7 +62,31 @@ gsap.utils.toArray('.skill-img').forEach((skillImg, index) => {
     });
 });
 
+gsap.utils.toArray('.title-contact').forEach(titleContact=>{
+    gsap.fromTo(titleContact,{
+        opacity:0,
+        x:-150,
+    },{
+        opacity:1,
+        x:0,
+        duration:1,
+        delay:.5,
+        scrollTrigger:titleContact
+    })
+})
 
+gsap.utils.toArray('.title-email').forEach(titleEmail=>{
+    gsap.fromTo(titleEmail,{
+        opacity:0,
+        x:150,
+    },{
+        opacity:1,
+        x:0,
+        duration:1,
+        delay:.5,
+        scrollTrigger:titleEmail
+    })
+})
 
 
 gsap.utils.toArray('.title').forEach(title=>{
