@@ -15,16 +15,16 @@ nav {
     rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
   z-index: 1;
 }
-nav .logo {
+nav .logosss {
   display: flex;
   align-items: center;
 }
-nav .logo img {
+nav .logosss img {
   height: 25px;
   width: auto;
   margin-right: 10px;
 }
-nav .logo h1 {
+nav .logosss h1 {
     font-size: 50px;
     background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
     -webkit-background-clip: text;
@@ -94,7 +94,7 @@ nav ul li a {
   width: 60%;
   height: 100vh;
   padding: 20% 0;
-  background: rgba(255, 255, 255);
+  background:#000A15;
   transition: all 0.5s ease-in;
   z-index: 2;
 }
@@ -113,7 +113,7 @@ nav ul li a {
 
 .menubar ul li a {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-size: 95%;
   font-weight: 400;
   padding: 5px 10px;

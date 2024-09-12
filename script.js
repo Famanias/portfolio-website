@@ -32,17 +32,6 @@ gsap.from('.h1', 1.5, {
     easy: "power4.inOut",
 });
 
-const menu_items = document.querySelector('.menu-items')
-gsap.from(menu_items.children ,{
-    opacity:0,
-    x:0,
-    duration:1,
-    delay:1.5,
-    stagger:{
-        amount:1
-    }
-})
-
 const media_links = document.querySelector('.media-links')
 gsap.from(media_links.children ,{
     opacity:0,
