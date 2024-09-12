@@ -64,9 +64,9 @@ footer p{
 }
 
 .profile-pic{
+    min-width: 250px;
     width: 100%;
     max-width: 700px;
-    height: auto;
 }
 
 .logos {
@@ -79,35 +79,12 @@ footer p{
     font-size: 25px;
 }
 
-.nav-bar{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-decoration: none;
-    padding: 2rem 5rem;
-}
-
-.nav-bar li a{
-    font-size: 25px;
-}
-.menu-items{
-    display: flex;
-    gap: 3rem;
-}
-
-.menu-items li{
-    list-style: none;
-}
-
-.menu-items a{
-    text-decoration: none;
-    color: #fff;
-}
-
 .container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
     align-items: center;
+    gap: 100px;
+    justify-content: center;
+    
 }
 
 
@@ -139,6 +116,11 @@ footer p{
     display: inline-flex;
     gap: 25px;
     margin-top: 25px;
+}
+
+.skills-container{
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -192,7 +174,6 @@ button:hover{
     margin-bottom: 25px;
     /* border: 1px solid #fff; */
     border-radius: 25px;
-    padding: 50px;
 }
 
 .skill-pic{
@@ -218,7 +199,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 3rem 5rem;
+    flex-wrap: wrap;
 }
 
 
@@ -228,8 +209,11 @@ button:hover{
     border-radius: 25px;
 }
 
+.card-img{
+    width: 100%;
+}
+
 .card-info h3{
-    font-family: Poppins;
     font-size: 50px;
 }
 
@@ -244,7 +228,18 @@ button:hover{
     margin-top: 2rem;
 }
 
-
 .name{
     display: flex;
+}
+
+#works{
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+
+    .container{
+        flex-direction: column;
+    }
+    
 }

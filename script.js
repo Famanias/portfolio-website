@@ -1,3 +1,11 @@
+const mobileNav = document.querySelector(".hamburger");
+const navbar = document.querySelector(".menubar");
+
+const toggleNav = () => {
+  navbar.classList.toggle("active");
+  mobileNav.classList.toggle("hamburger-active");
+};
+mobileNav.addEventListener("click", () => toggleNav());
 
 document.getElementById('downloadCV').addEventListener('click', function() {
     const link = document.createElement('a');
@@ -6,8 +14,8 @@ document.getElementById('downloadCV').addEventListener('click', function() {
     link.click();
 });
 
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.from('.logo div',{
     opacity:0,
