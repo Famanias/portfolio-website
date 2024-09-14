@@ -202,11 +202,17 @@ button:hover{
     flex-wrap: wrap;
 }
 
-
+.card-container a{
+    text-decoration: none;
+}
 .card{
     border: 1px solid #00C0FF;
     padding: 50px;
     border-radius: 25px;
+}
+
+.btn{
+    margin-top: 25px;
 }
 
 .card-img{
@@ -220,6 +226,7 @@ button:hover{
 .card-info p{
     max-width: 450px;
 }
+
 
 .line{
     width: 100%;
